@@ -25,12 +25,13 @@ bucket = storage.bucket()
 
 # get the upload file's path in repository's directory
 # the file to upload in this scenario (a zip file) is in the same directory with the script
-fileName = 'firmware.bin'
-dirname = os.path.dirname(os.path.realpath(__file__))
-fileFullPath = dirname + '/' + fileName
+# fileName = 'firmware.bin'
+# dirname = os.path.dirname(os.path.realpath(__file__))
+# fileFullPath = dirname + '/' + fileName
+fileFullPath = '..//.pio//build//esp32doit-devkit-v1//firmware.bin'
 
 # if the file name contains file path, the bucket will create folders corresponding to the path.
-blob = bucket.blob('..//.pio//build//esp32doit-devkit-v1//firmware.bin')
+blob = bucket.blob(fileFullPath)
 
 # optional: Create new token, this one only used for downloading directly from firebase console page
 accessToken = uuid4()
