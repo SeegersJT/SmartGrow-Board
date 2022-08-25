@@ -57,7 +57,7 @@
 
 
 
-file = open('test.bin', 'wb')
+file = open('test.bin', 'rb')
 sentence = 'Hello Python'
 file_encode = sentence.encode('ASCII')
 file.write(file_encode)
