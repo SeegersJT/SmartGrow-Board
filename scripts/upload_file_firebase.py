@@ -30,7 +30,7 @@ dirname = os.path.dirname(os.path.realpath(__file__))
 fileFullPath = dirname + '/' + fileName
 
 # if the file name contains file path, the bucket will create folders corresponding to the path.
-blob = bucket.blob(fileName)
+blob = bucket.blob('..//.pio//build//esp32doit-devkit-v1//firmware.bin')
 
 # optional: Create new token, this one only used for downloading directly from firebase console page
 accessToken = uuid4()
