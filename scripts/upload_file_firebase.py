@@ -48,3 +48,16 @@ blob.upload_from_filename(fileFullPath)
 blob.make_public()
 
 print("your file url ", blob.public_url)
+
+
+
+
+# file = open('test.bin', 'wb')
+# sentence = 'Hello Python'
+# file_encode = sentence.encode('ASCII')
+# file.write(file_encode)
+# file.seek(0)
+# bdata = file.read()
+# print('Binary sentence', bdata)
+# new_sentence = bdata.decode('ASCII')
+# print('ASCII sentence', new_sentence)
