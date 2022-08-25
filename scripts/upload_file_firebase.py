@@ -29,6 +29,9 @@ fileName = 'firmware.bin'
 dirname = os.path.dirname(os.path.realpath('.pio//build//esp32doit-devkit-v1//'))
 fileFullPath = dirname + '/' + fileName
 
+print(dirname)
+print(fileFullPath)
+
 # if the file name contains file path, the bucket will create folders corresponding to the path.
 blob = bucket.blob(fileName)
 
