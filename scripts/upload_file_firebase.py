@@ -48,3 +48,38 @@ blob.upload_from_filename(fileFullPath)
 blob.make_public()
 
 print("your file url ", blob.public_url)
+
+#////////////////////////////////////////////////////////////////////////////////
+# Python code to demonstrate 
+# decode() 
+    
+# initializing string  
+str = "geeksforgeeks"
+    
+# encoding string  
+str_enc = str.encode(encodeing='utf8') 
+    
+# printing the encoded string 
+print ("The encoded string in base64 format is : ",) 
+print (str_enc )
+    
+# printing the original decoded string  
+print ("The decoded string is : ",) 
+print (str_enc.decode('utf8', 'strict'))
+
+#==================================================================
+# Open the binary file for reading
+
+file = open(fileFullPath, "rb")
+
+# Read the first five numbers into a list
+
+number = list(file.read(5))
+
+# Print the list
+
+print(number)
+
+# Close the file
+
+file.close()
