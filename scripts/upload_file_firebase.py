@@ -66,20 +66,3 @@ print (str_enc )
 # printing the original decoded string  
 print ("The decoded string is : ",) 
 print (str_enc.decode('utf8', 'strict'))
-
-#==================================================================
-# Open the binary file for reading
-
-file = open(fileFullPath, "rb")
-
-# Read the first five numbers into a list
-
-number = list(file.read(5))
-
-# Print the list
-
-print(number)
-
-# Close the file
-
-file.close()
