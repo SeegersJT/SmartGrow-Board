@@ -32,7 +32,7 @@ print(os.path.dirname('.pio//build//esp32doit-devkit-v1'))
 print(dirname)
 
 print(dirname)
-fileFullPath = '/Users/runner/work/SmartGrow-Board/SmartGrow-Board/.pio/build/esp32doit-devkit-v1'
+fileFullPath = '/Users/runner/work/SmartGrow-Board/SmartGrow-Board/.pio/build/esp32doit-devkit-v1/firmware.bin'
 
 # if the file name contains file path, the bucket will create folders corresponding to the path.
 blob = bucket.blob(fileName)
