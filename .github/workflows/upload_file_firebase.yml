@@ -36,9 +36,9 @@ jobs:
         id: write_key_file
         uses: timheuer/base64-to-file@v1
         with:
-          fileName: '<FIREBASE_ENCODED_STORAGE_FILE_NAME>.json' # name of the written key file
+          fileName: 'secrets.<FIREBASE_ENCODED_STORAGE_FILE_NAME>.json' # name of the written key file
           encodedString: ${{ secrets.<FIREBASE_ENCODED_STORAGE_KEY> }} # Secret stored in Github secrets
       
       # run the upload script
       - name: run upload script
-        run: python ./scripts/.py  # the path to upload script in the repository
+        run: python ./scripts/upload_file_firebase.py  # the path to upload script in the repository
