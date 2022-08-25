@@ -26,17 +26,11 @@ bucket = storage.bucket()
 # get the upload file's path in repository's directory
 # the file to upload in this scenario (a zip file) is in the same directory with the script
 fileName = 'firmware.bin'
-dirname = os.path.dirname(os.path.realpath(__file__))
+dirname = os.path.dirname('.pio//build//esp32doit-devkit-v1')
 fileFullPath = dirname + '/' + fileName
-# fileName = 'firmware.bin'
-# dirname = os.path.dirname(os.path.realpath('.pio//build//esp32doit-devkit-v1//firmware.bin'))
-# fileFullPath = dirname + '/' + fileName
-
-print("=========fileFullPath================")
-print(fileFullPath)
 
 # if the file name contains file path, the bucket will create folders corresponding to the path.
-blob = bucket.blob(fileFullPath)
+blob = bucket.blob(fileName)
 
 # optional: Create new token, this one only used for downloading directly from firebase console page
 accessToken = uuid4()
@@ -54,20 +48,3 @@ blob.upload_from_filename(fileFullPath)
 blob.make_public()
 
 print("your file url ", blob.public_url)
-
-#==================================================================
-# Open the binary file for reading
-
-file = open(fileFullPath, "rb")
-
-# Read the first five numbers into a list
-
-number = list(file.read(5))
-
-# Print the list
-
-print(number)
-
-# Close the file
-
-file.close()
