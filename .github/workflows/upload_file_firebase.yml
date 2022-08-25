@@ -37,7 +37,7 @@ jobs:
         uses: timheuer/base64-to-file@v1
         with:
           fileName: 'smart-grow-41b4b-c5425ce2afb8.json' # name of the written key file
-          encodedString: ${{ secrets.<FIREBASE_ENCODED_STORAGE_KEY> }} # Secret stored in Github secrets
+          encodedString: ${{ secrets.FIREBASE_ENCODED_STORAGE_KEY }} # Secret stored in Github secrets
       
       # run the upload script
       - name: run upload script
