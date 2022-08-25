@@ -1,4 +1,4 @@
-name: upload file to Firebase workflow
+name: Upload firmware to Firebase Storage
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  check-json:
-    name: Make a json
+  Upload-File-to-Firebase-Storage:
+    name: Upload File to Firebase Storage
     runs-on: macos-latest
     steps:
       # check out the repository
