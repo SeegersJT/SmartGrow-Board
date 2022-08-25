@@ -26,7 +26,7 @@ bucket = storage.bucket()
 # get the upload file's path in repository's directory
 # the file to upload in this scenario (a zip file) is in the same directory with the script
 fileName = 'firmware.bin'
-dirname = os.path.dirname(os.path.realpath('.pio//build//esp32doit-devkit-v1//'))
+dirname = os.path.dirname(os.path.realpath('//.pio//build//esp32doit-devkit-v1//'))
 fileFullPath = dirname + '/' + fileName
 
 print(dirname)
