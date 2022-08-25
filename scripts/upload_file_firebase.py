@@ -28,14 +28,12 @@ bucket = storage.bucket()
 # fileName = 'firmware.bin'
 # dirname = os.path.dirname(os.path.realpath(__file__))
 # fileFullPath = dirname + '/' + fileName
+fileName = 'firmware.bin'
 dirname = os.path.dirname(os.path.realpath('//.pio//build//esp32doit-devkit-v1//firmware.bin'))
-fileFullPath = '..//.pio//build//esp32doit-devkit-v1//firmware.bin'
+fileFullPath = dirname + '/' + fileName
 
-print("fileFullPath")
+print("=========fileFullPath================")
 print(fileFullPath)
-
-print("dirname")
-print(dirname)
 
 # if the file name contains file path, the bucket will create folders corresponding to the path.
 blob = bucket.blob(fileFullPath)
