@@ -5,9 +5,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-jobs:   
+jobs:
   check-json:
-    needs: [ciTask] # trigger the ci task must be success to run this upload task
     name: Make a json
     runs-on: macos-latest
     steps:
