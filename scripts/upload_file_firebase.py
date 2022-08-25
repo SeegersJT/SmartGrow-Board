@@ -12,12 +12,12 @@ githubTempPath = '/Users/runner/work/_temp'
 
 # google cloud's service account key file absolute path on github's machine directory
 # note that the file name must be matched with the file name created from timheuer/base64-to-file@v1 action on the workflow
-keyFilePath = githubTempPath + '/<ENCODED_KEY_FILE_NAME>.json'
+keyFilePath = githubTempPath + '/smart-grow-41b4b-c5425ce2afb8.json'
 
 # apply the bucket domain to the credentials
 cred = credentials.Certificate(keyFilePath)
 firebase_admin.initialize_app(cred, {
-    'storageBucket' : '<BUCKET_NAME>.appspot.com'
+    'storageBucket' : 'smart-grow-41b4b.appspot.com'
 })
 
 # refer to the storage bucket
