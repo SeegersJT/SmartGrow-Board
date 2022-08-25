@@ -26,11 +26,8 @@ bucket = storage.bucket()
 # get the upload file's path in repository's directory
 # the file to upload in this scenario (a zip file) is in the same directory with the script
 fileName = 'firmware.bin'
-dirname = os.path.dirname('//.pio//build//esp32doit-devkit-v1')
+dirname = os.path.dirname(os.path.realpath(__file__))
 fileFullPath = dirname + '/' + fileName
-
-print(dirname)
-print(fileFullPath)
 
 # if the file name contains file path, the bucket will create folders corresponding to the path.
 blob = bucket.blob(fileName)
