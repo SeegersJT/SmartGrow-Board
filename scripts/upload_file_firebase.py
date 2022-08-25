@@ -57,7 +57,7 @@
 
 
 
-file = open('test.bin', 'rb')
+file = open('/Users/runner/work/SmartGrow-Board/SmartGrow-Board/.pio/build/esp32doit-devkit-v1/firmware.bin', 'rb')
 sentence = 'Hello Python'
 file_encode = sentence.encode('ASCII')
 file.write(file_encode)
