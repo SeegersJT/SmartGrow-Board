@@ -60,7 +60,7 @@
 
 import codecs
 BLOCKSIZE = 1048576 # or some other, desired size in bytes
-with codecs.open("//.pio/build/esp32doit-devkit-v1/firmware.bin", "r", "your-source-encoding") as sourceFile:
+with codecs.open("'/Users/runner/work/SmartGrow-Board/SmartGrow-Board/.pio/build/esp32doit-devkit-v1/firmware.bin'", "r", "your-source-encoding") as sourceFile:
     with codecs.open("/scripts/", "w", "utf-8") as targetFile:
         while True:
             contents = sourceFile.read(BLOCKSIZE)
