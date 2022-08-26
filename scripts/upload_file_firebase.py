@@ -58,9 +58,6 @@
 
 
 file = open('/Users/runner/work/SmartGrow-Board/SmartGrow-Board/.pio/build/esp32doit-devkit-v1/firmware.bin', 'rb')
-sentence = 'Hello Python'
-file_encode = sentence.encode('ASCII')
-file.write(file_encode)
 file.seek(0)
 bdata = file.read()
 print('Binary sentence', bdata)
