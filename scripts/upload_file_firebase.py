@@ -25,13 +25,6 @@
 
 # # get the upload file's path in repository's directory
 # # the file to upload in this scenario (a zip file) is in the same directory with the script
-# fileName = 'firmware.bin'
-# dirname = os.path.dirname(os.path.realpath('.pio//build//esp32doit-devkit-v1'))
-
-# print(os.path.dirname('.pio//build//esp32doit-devkit-v1'))
-# print(dirname)
-
-# print(dirname)
 # fileFullPath = '/Users/runner/work/SmartGrow-Board/SmartGrow-Board/.pio/build/esp32doit-devkit-v1/firmware.bin'
 
 # # if the file name contains file path, the bucket will create folders corresponding to the path.
@@ -57,9 +50,20 @@
 
 
 
-file = open('/Users/runner/work/SmartGrow-Board/SmartGrow-Board/.pio/build/esp32doit-devkit-v1/firmware.bin', 'rb')
-file.seek(0)
-bdata = file.read()
-print('Binary sentence', bdata)
-new_sentence = bdata.decode('ASCII')
-print('ASCII sentence', new_sentence)
+# file = open('/Users/runner/work/SmartGrow-Board/SmartGrow-Board/.pio/build/esp32doit-devkit-v1/firmware.bin', 'rb')
+# file.seek(0)
+# bdata = file.read()
+# print('Binary sentence', bdata)
+# new_sentence = bdata.decode('ASCII')
+# print('ASCII sentence', new_sentence)
+
+
+import codecs
+BLOCKSIZE = 1048576 # or some other, desired size in bytes
+with codecs.open("//.pio/build/esp32doit-devkit-v1/firmware.bin", "r", "your-source-encoding") as sourceFile:
+    with codecs.open("/scripts/", "w", "utf-8") as targetFile:
+        while True:
+            contents = sourceFile.read(BLOCKSIZE)
+            if not contents:
+                break
+            targetFile.write(contents)
